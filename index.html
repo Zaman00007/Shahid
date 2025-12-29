@@ -672,6 +672,177 @@
         .glitch:hover {
             animation: glitch 0.5s infinite;
         }
+
+        /* =======================
+   ABOUT ME SECTION
+======================= */
+
+#about {
+    padding: 6rem 2rem;
+}
+
+.about-card {
+    background: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    max-width: 1000px;
+    margin: 0 auto;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(0, 255, 136, 0.08),
+        transparent
+    );
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.about-card:hover::before {
+    opacity: 1;
+}
+
+.about-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary);
+    box-shadow: 0 15px 45px rgba(0, 255, 136, 0.3);
+}
+
+.about-card p {
+    color: var(--text-dim);
+    font-size: 1.05rem;
+    line-height: 1.9;
+    margin-bottom: 1.5rem;
+}
+
+.tech-arsenal {
+    margin-top: 2rem;
+}
+
+.tech-arsenal h4 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--accent);
+    margin-bottom: 1.2rem;
+}
+
+.tech-group {
+    background: rgba(0, 255, 136, 0.05);
+    border: 1px solid rgba(0, 255, 136, 0.2);
+    border-radius: 15px;
+    padding: 1.2rem 1.5rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.tech-group:hover {
+    border-color: var(--primary);
+    background: rgba(0, 255, 136, 0.1);
+    transform: translateX(5px);
+}
+
+.tech-group h5 {
+    color: var(--primary);
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+}
+
+.tech-group p {
+    font-size: 0.95rem;
+    color: var(--text-dim);
+}
+
+/* =======================
+   EXPERIENCE SECTION
+======================= */
+
+#experience {
+    padding: 6rem 2rem;
+}
+
+.experience-card {
+    background: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: 20px;
+    border-left: 4px solid var(--primary);
+    max-width: 1000px;
+    margin: 0 auto;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.experience-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(0, 255, 136, 0.07),
+        transparent
+    );
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.experience-card:hover::before {
+    opacity: 1;
+}
+
+.experience-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 45px rgba(0, 255, 136, 0.35);
+}
+
+.experience-card h3 {
+    font-size: 1.6rem;
+    color: var(--primary);
+    margin-bottom: 0.3rem;
+}
+
+.experience-org {
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 0.2rem;
+}
+
+.experience-duration {
+    font-size: 0.9rem;
+    color: var(--text-dim);
+    margin-bottom: 1.5rem;
+}
+
+.experience-list {
+    list-style: none;
+    padding-left: 1.5rem;
+}
+
+.experience-list li {
+    position: relative;
+    color: var(--text-dim);
+    margin-bottom: 0.7rem;
+    line-height: 1.7;
+}
+
+.experience-list li::before {
+    content: '▹';
+    position: absolute;
+    left: -1.5rem;
+    color: var(--primary);
+    font-size: 1.2rem;
+}
+
     </style>
 </head>
 <body>
@@ -744,7 +915,7 @@
             <div class="interest-card">
                 <div class="icon-box">
                     <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <polyline points="16 18 22 12 16 6></polyline>
+                        <polyline points="16 18 22 12 16 6"></polyline>
 
 <invoke name="artifacts">
 <parameter name="command">update</parameter>
@@ -786,6 +957,70 @@
         </div>
     </div>
 </section>
+
+<!-- About Me Section -->
+<section id="about">
+    <h2 class="section-title">ABOUT ME</h2>
+
+    <div class="about-card">
+        <p>
+            I am a Computer Science Engineer with a strong interest in Deep Learning, Cyber Security, and IoT,
+            driven by a passion for building intelligent, secure, and scalable systems that solve real-world problems.
+        </p>
+
+        <p>
+            My work spans medical imaging and legal AI, including breast cancer detection using advanced deep learning
+            architectures and NLP-powered legal assistance platforms. I have authored research papers published on
+            IEEE Xplore, reflecting my commitment to innovation and applied research.
+        </p>
+
+        <p>
+            Beyond academics and development, I follow a disciplined lifestyle with interests in chess, martial arts,
+            wrestling, gym training, PS5 gaming, and engaging in analytical political debates that sharpen critical
+            thinking and strategic reasoning.
+        </p>
+
+        <div class="tech-arsenal">
+            <h4>TECHNICAL ARSENAL</h4>
+
+            <div class="tech-group">
+                <h5>AI & Machine Learning</h5>
+                <p>Deep Learning, Computer Vision, NLP, YOLO, CNN, BiLSTM</p>
+            </div>
+
+            <div class="tech-group">
+                <h5>Security & Networks</h5>
+                <p>Cyber Security, DDoS Detection, Software-Defined Networks (SDN)</p>
+            </div>
+
+            <div class="tech-group">
+                <h5>Development & Systems</h5>
+                <p>Python, Ruby on Rails, React, Node.js, Web Development, IoT</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Experience Section -->
+<section id="experience">
+    <h2 class="section-title">EXPERIENCE</h2>
+
+    <div class="experience-card">
+        <h3>Full Stack Developer Intern</h3>
+        <p class="experience-org">Makerble · Remote</p>
+        <p class="experience-duration">May 2024 – November 2024</p>
+
+        <ul class="experience-list">
+            <li>Developed and maintained new features for the Makerble web application.</li>
+            <li>Resolved 50+ Jira issues, reducing issue resolution time by 30%.</li>
+            <li>Collaborated with cross-functional teams using Agile workflows.</li>
+            <li>Implemented scalable Ruby on Rails functionalities, improving performance by 20%.</li>
+            <li>Optimized data filters with batch loading, cutting load times by 40%.</li>
+            <li>Reviewed pull requests to ensure clean, maintainable, and high-quality code.</li>
+        </ul>
+    </div>
+</section>
+
 
 <!-- Projects Section -->
 <section id="projects">
